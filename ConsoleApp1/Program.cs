@@ -18,12 +18,12 @@ namespace ConsoleApp
             {
                 if (args.Length > 1)
                 {
-                    cmdline = $"Too Many Commandline arguments passed in: {args.Length}";
+                    cmdline = $"Too Many Commandline arguments passed in: {args.Length}, all are ignored";
                 }
                 else
                 {
                     looper = args[0].ToLower().Replace("-", "");
-                    cmdline = $"Command {args[0].ToLower()} passed in, looper set to {looper}";
+                    cmdline = $"Command {args[0].ToLower()} passed in, menu item {looper} activated";
                 }
             }
 
@@ -55,7 +55,7 @@ namespace ConsoleApp
                         display.DisplayProgramMenu(true);
                         break;
                     default:
-                        display.DisplayText(display.xleftStatusMsg, display.yStatus, "Unknown Menu Command Entered    ");
+                        display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");
                         break;
                 }
                 looper = "";
