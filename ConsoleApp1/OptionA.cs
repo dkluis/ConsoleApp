@@ -6,8 +6,8 @@ namespace ConsoleApp
         public void Main2()
         {
             Display disp = new Display();
-            disp.DisplayText(15, 15, "Option A Execion from OptionA.cs");
-            disp.GetInput(0, 0, "");
+            disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, "Option A Execution from OptionA.cs");
+            disp.GetInput(0, 0, "Hit Any Key: ");
         }
     }
 }

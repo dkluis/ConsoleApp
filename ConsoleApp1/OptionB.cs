@@ -1,5 +1,4 @@
 ﻿
-
 namespace ConsoleApp
 {
     class OptionB
@@ -7,8 +6,8 @@ namespace ConsoleApp
         public void Main3()
         {
             Display disp = new Display();
-            disp.DisplayText(15, 15, "Option B Execion from OptionB.cs");
-            disp.GetInput(0, 0, "");
+            disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, "Option B Execution from OptionB.cs");
+            disp.GetInput(0, 0, "Hit Any Other Key: ");
         }
     }
 }

@@ -4,19 +4,30 @@ namespace ConsoleApp
 {
     class Display
     {
+        public int yTitle = 3;
+        public int yTop = 5;
+        public int yInput = 11;
+        public int yStatus = 13;
+        public int xLeftCol1 = 5;
+        public int xleftCol2 = 40;
+        public int xleftOther = 15;
+        public int xleftStatus = 18;
+        public int xleftStatusMsg = 25;
+        public int xleftInput = 18;
+
         public void DisplayProgramMenu(bool refresh)
         {
             if (refresh)
             {
                 Console.Clear();
             }
-            DisplayText(5, 3, "Simple Main Menu");
-            DisplayText(5, 5, "a. Do Something");
-            DisplayText(5, 6, "b. Do Something Else");
-            DisplayText(40, 5, "c. Do Another Thing");
-            DisplayText(40, 6, "d. Yet Another Thingy");
-            DisplayText(15, 9, "(q - Quit)");
-            DisplayText(15, 10, "Status:");
+            DisplayText(xLeftCol1, yTitle, "Simple Main Menu");
+            DisplayText(xLeftCol1, yTop, "a. Do Something");
+            DisplayText(xLeftCol1, yTop + 1, "b. Do Something Else");
+            DisplayText(xleftCol2, yTop, "c. Do Another Thing");
+            DisplayText(xleftCol2, yTop + 1, "d. Yet Another Thingy");
+            DisplayText(xleftOther, yInput + 1, "(q - Quit)");
+            DisplayText(xleftOther, yStatus, "Status:");
         }
 
         public void DisplayText(int xpos, int ypos, string text)
