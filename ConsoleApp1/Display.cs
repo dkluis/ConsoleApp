@@ -13,8 +13,10 @@ namespace ConsoleApp
             DisplayText(5, 3, "Simple Main Menu");
             DisplayText(5, 5, "a. Do Something");
             DisplayText(5, 6, "b. Do Something Else");
-            DisplayText(8, 9, "(q - Quit)");
-            DisplayText(8, 10, "Status:");
+            DisplayText(40, 5, "c. Do Another Thing");
+            DisplayText(40, 6, "d. Yet Another Thingy");
+            DisplayText(15, 9, "(q - Quit)");
+            DisplayText(15, 10, "Status:");
         }
 
         public void DisplayText(int xpos, int ypos, string text)
