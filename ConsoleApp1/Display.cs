@@ -2,8 +2,15 @@
 
 namespace ConsoleApp
 {
+    /// <summary>
+    /// Class to handle all Console writing and reading
+    /// Used to learn putting a class into it's own file and use from elsewhere in the solution
+    /// </summary>
     class Display
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public int yTitle = 3;
         public int yTop = 5;
         public int yInput = 11;
@@ -15,6 +22,11 @@ namespace ConsoleApp
         public int xleftStatusMsg = 25;
         public int xleftInput = 18;
 
+        /// <summary>
+        /// Display the main program menu
+        /// Used to learn how to position text while writing to the console
+        /// </summary>
+        /// <param name="refresh">Used to refresh the console and delete all current displayed text</param>
         public void DisplayProgramMenu(bool refresh)
         {
             if (refresh)
@@ -30,12 +42,25 @@ namespace ConsoleApp
             DisplayText(xleftOther, yStatus, "Status:");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="xpos"></param>
+        /// <param name="ypos"></param>
+        /// <param name="text"></param>
         public void DisplayText(int xpos, int ypos, string text)
         {
             Console.SetCursorPosition(xpos, ypos);
             Console.Write(text);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="xpos"></param>
+        /// <param name="ypos"></param>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public string GetInput(int xpos, int ypos, string text)
         {
             DisplayText(xpos, ypos, text);
