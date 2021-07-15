@@ -30,8 +30,7 @@ namespace ConsoleApp
                 }
 
                 StrMani SM = new StrMani();
-                SM.ValidateRegex("[0-9]");
-
+                SM.ValidateRegex(Pattern, InspectionString);
 
                 Looper = disp.GetInput(0, 1, "Hit q: ");
             }
