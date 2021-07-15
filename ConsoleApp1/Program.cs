@@ -1,4 +1,5 @@
 ﻿using System;
+using DisplayLib;
 
 namespace ConsoleApp
 {

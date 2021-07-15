@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System;
+//using DisplayLib;
 
 
 namespace StringManipulations
@@ -13,40 +14,46 @@ namespace StringManipulations
 
     public class StrMani
     {
-        public string ValidateRegex(string regexin, string stringin)
+        public string[] ValidateRegex(string regexin, string stringin, bool debug)
         {
+            //Display disp = new Display();
+
             regexin = $"(.{regexin}.)";
             try
             {
                 string[] splitcollection = Regex.Split(stringin, regexin);
 
-                Console.SetCursorPosition(20, 20);
-                if (splitcollection.Length == 1)
+                if (debug)
                 {
-                    Console.WriteLine("No match found");
-                }
-                else
-                {
-                    if (splitcollection.Length != 3)
+                    Console.SetCursorPosition(20, 20);
+                    if (splitcollection.Length == 1)
                     {
-                        Console.WriteLine($"Found an unexpected number of matches {splitcollection.Length}");
+                        Console.WriteLine("No match found");
+                    }
+                    else
+                    {
+                        if (splitcollection.Length != 3)
+                        {
+                            Console.WriteLine($"Found an unexpected number of matches {splitcollection.Length}");
+                        }
+                    }
+
+                    foreach (string str in splitcollection)
+                    {
+                        Console.WriteLine(str);
                     }
                 }
 
-                foreach (string str in splitcollection)
-                {
-                    Console.WriteLine(str);
-                }
+                return splitcollection;
             }
             catch (Exception e)
             {
                 Console.Clear();
                 Console.WriteLine($"Invalid Regex Exception");
                 Console.WriteLine($"{e}");
-                return "";
+                string[] empty = new string[] { };
+                return empty;
             }
-            
-            return "";
         }
     }
 }

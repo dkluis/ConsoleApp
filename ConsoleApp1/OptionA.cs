@@ -1,4 +1,5 @@
 ﻿using StringManipulations;
+using DisplayLib;
 
 namespace ConsoleApp
 {
@@ -30,7 +31,12 @@ namespace ConsoleApp
                 }
 
                 StrMani SM = new StrMani();
-                SM.ValidateRegex(Pattern, InspectionString);
+                
+                string[] result = SM.ValidateRegex(Pattern, InspectionString, false);
+                if (result[0] == InspectionString)
+                {
+                    disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, "Pattern not found in the string");
+                }
 
                 Looper = disp.GetInput(0, 1, "Hit q: ");
             }

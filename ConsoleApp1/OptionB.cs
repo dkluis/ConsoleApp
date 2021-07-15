@@ -1,4 +1,5 @@
-﻿
+﻿using DisplayLib;
+
 namespace ConsoleApp
 {
     class OptionB

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp
+namespace DisplayLib
 {
     /// <summary>
     /// Class to handle all Console writing and reading
@@ -42,6 +42,10 @@ namespace ConsoleApp
             DisplayText(xleftOther, yStatus, "Status:");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="refresh"></param>
         public void DisplayOptionAScreen(bool refresh)
         {
             if (refresh)
