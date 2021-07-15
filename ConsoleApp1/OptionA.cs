@@ -33,7 +33,7 @@ namespace ConsoleApp
 
                 StrMani SM = new StrMani();
                 
-                string[] result = SM.ValidateRegex(Pattern, InspectionString, false);
+                string[] result = SM.ValidateRegex(Pattern, InspectionString);
                 if (result[0] == InspectionString)
                 {
                     disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, "Pattern not found in the string");

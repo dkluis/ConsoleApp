@@ -23,21 +23,29 @@ namespace ConsoleApp
                     break;
                 }
 
+                MediaInfo mi = new MediaInfo();
+                mi.MediaString = InspectionString;
+                mi.isMedia = false;
+                mi.isMovie = false;
+                mi.isTVShow = false;
+                mi.TVShowName = "";
+                mi.ValidateRegexResult = new string[] { };
+
                 StrMani SM = new StrMani();
                 
                 string[] result = new string[] { };
                 foreach (string pattern in SM.MediaPatterns)
                 {
-                    result = SM.ValidateRegex(pattern, InspectionString.ToLower(), false);
-                    //}
-                    //string[] result = SM.ValidateRegex(Pattern, InspectionString, false);
-                    if (result[0] == InspectionString.ToLower())
+                    result = SM.ValidateRegex(pattern, mi.MediaString);
+                    if (result[0] == mi.MediaString)
                     {
                         disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, "Media not found in the string");
                     }
                     else
                     {
-                        disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, $"Media found is: \"{result[0]}\" and lenght {result.Length}");
+                        disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, $"Media found is: \"{result[0]}\", \"{result[1]}\", \"{result[2]}\", and lenght {result.Length}");
+                        mi.isTVShow = true;
+                        mi.TVShowName = result[0];
                         break;
                     }
                 }

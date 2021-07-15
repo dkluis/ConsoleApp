@@ -14,8 +14,9 @@ namespace StringManipulations
 
     public class StrMani
     {
-        public string[] MediaPatterns = new string[] { "s[0][0-9]e[0-9[0-9]", "s[0-9]e[0-9]", "s[0-9][0-9]", "s[0-9]", "season[ .][0-9]", "season[ .][0-9][0-9]" };
-        public string[] ValidateRegex(string regexin, string stringin, bool debug)
+        public string[] MediaPatterns = new string[] { "[sS][0-9][0-9][eE][0-9[0-9]", "[sS][0-9][eE][0-9]", "[sS][0-9][0-9]", "[sS][0-9]", "season[ .][0-9]", "season[ .][0-9][0-9]"};
+        public string[] MediaFormats = new string[] {".mkv", ".mp4"};
+        public string[] ValidateRegex(string regexin, string stringin)
         {
             Display disp = new Display();
 
@@ -23,25 +24,6 @@ namespace StringManipulations
             try
             {
                 string[] splitcollection = Regex.Split(stringin, regexin);
-
-                if (debug)
-                {
-                    if (splitcollection.Length == 1)
-                    {
-                        disp.DisplayText(20,20, "No match found");
-                    }
-                    else
-                    {
-                        if (splitcollection.Length != 3)
-                        {
-                            disp.DisplayText(20, 20, $"Found an unexpected number of matches {splitcollection.Length}");
-                        }
-                    }
-                    foreach (string str in splitcollection)
-                    {
-                        disp.DisplayText(20,20, splitcollection.ToString());
-                    }
-                }
 
                 return splitcollection;
             }
@@ -54,5 +36,15 @@ namespace StringManipulations
                 return empty;
             }
         }
+    }
+
+    public struct MediaInfo
+    {
+        public bool isTVShow;
+        public bool isMovie;
+        public bool isMedia;
+        public string TVShowName;
+        public string MediaString;
+        public string[] ValidateRegexResult;
     }
 }
