@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\StringManipulations\StringManipalations\StringManipulations.csproj" />
+    <ProjectReference Include="..\StringManipulations\StringManipalations\StringManipulations.csproj" />
   </ItemGroup>
 
 </Project>
