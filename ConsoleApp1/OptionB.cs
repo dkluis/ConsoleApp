@@ -31,7 +31,7 @@ namespace ConsoleApp
                     result = SM.ValidateRegex(pattern, InspectionString.ToLower(), false);
                     //}
                     //string[] result = SM.ValidateRegex(Pattern, InspectionString, false);
-                    if (result[0] == InspectionString)
+                    if (result[0] == InspectionString.ToLower())
                     {
                         disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, "Media not found in the string");
                     }
