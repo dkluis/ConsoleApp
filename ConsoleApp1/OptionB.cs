@@ -37,7 +37,7 @@ namespace ConsoleApp
                     }
                     else
                     {
-                        disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, $"Media found is: {result[0]}");
+                        disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, $"Media found is: \"{result[0]}\" and lenght {result.Length}");
                         break;
                     }
                 }

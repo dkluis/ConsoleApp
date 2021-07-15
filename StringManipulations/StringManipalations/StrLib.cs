@@ -14,7 +14,7 @@ namespace StringManipulations
 
     public class StrMani
     {
-        public string[] MediaPatterns = new string[] { "s[0][0-9]e[0-9[0-9]", "s[0-9]e[0-9]", "season[ .][0-9]", "season[ .][0-9][0-9]" };
+        public string[] MediaPatterns = new string[] { "s[0][0-9]e[0-9[0-9]", "s[0-9]e[0-9]", "s[0-9][0-9]", "s[0-9]", "season[ .][0-9]", "season[ .][0-9][0-9]" };
         public string[] ValidateRegex(string regexin, string stringin, bool debug)
         {
             Display disp = new Display();
