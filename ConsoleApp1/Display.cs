@@ -34,10 +34,22 @@ namespace ConsoleApp
                 Console.Clear();
             }
             DisplayText(xLeftCol1, yTitle, "Simple Main Menu");
-            DisplayText(xLeftCol1, yTop, "a. Do Something");
+            DisplayText(xLeftCol1, yTop, "a. Find a pattern in a string");
             DisplayText(xLeftCol1, yTop + 1, "b. Do Something Else");
             DisplayText(xleftCol2, yTop, "c. Do Another Thing");
             DisplayText(xleftCol2, yTop + 1, "d. Yet Another Thingy");
+            DisplayText(xleftOther, yInput + 1, "(q - Quit)");
+            DisplayText(xleftOther, yStatus, "Status:");
+        }
+
+        public void DisplayOptionAScreen(bool refresh)
+        {
+            if (refresh)
+            {
+                Console.Clear();
+            }
+            DisplayText(xLeftCol1, yTitle, "Find a pattern in a string");
+
             DisplayText(xleftOther, yInput + 1, "(q - Quit)");
             DisplayText(xleftOther, yStatus, "Status:");
         }
