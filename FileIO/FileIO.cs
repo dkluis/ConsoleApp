@@ -11,10 +11,27 @@ namespace FileIO
 
         public class TextFile
         {
-            public bool WriteText(string[] line, bool appending)
+            public bool FileExistCreate(string file, bool create)
+            {
+                bool exist = false;
+                if (!File.Exists(file))
+                {
+                    if (create)
+                    {
+                        File.Create(file);
+                        exist = true;
+                    }
+                }
+                else
+                {
+                    exist = true;
+                }
+                return exist;
+            }
+
+            public void WriteText(string[] line, bool appending)
             {
                 // File.WriteAllLines("Config.txt", line, append: appending);
-                return true;
             }
 
             public string[] ReadLines()
