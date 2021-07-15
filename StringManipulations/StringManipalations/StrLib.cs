@@ -14,8 +14,10 @@ namespace StringManipulations
 
     public class StrMani
     {
-        public string[] MediaPatterns = new string[] { "[sS][0-9][0-9][eE][0-9[0-9]", "[sS][0-9][eE][0-9]", "[sS][0-9][0-9]", "[sS][0-9]", "season[ .][0-9]", "season[ .][0-9][0-9]"};
-        public string[] MediaFormats = new string[] {".mkv", ".mp4"};
+        public string[] MediaPatterns = new string[] { "[sS][0-9][0-9][eE][0-9[0-9]", "[sS][0-9][eE][0-9]", "[sS][0-9][0-9]", "[sS][0-9]", "season[ .][0-9]", "season[ .][0-9][0-9]" };
+        public string[] MediaFormats = new string[] { ".mkv", ".mp4" };
+        public string[] MediaEliminators = new string[] {"www.", "rarbg" };
+
         public string[] ValidateRegex(string regexin, string stringin)
         {
             Display disp = new Display();
@@ -35,6 +37,27 @@ namespace StringManipulations
                 string[] empty = new string[] { };
                 return empty;
             }
+        }
+
+        public MediaInfo EliminatePrefixes(MediaInfo mi)
+        {
+            string name = mi.TVShowName;
+            foreach (string prefix in MediaEliminators)
+            {
+                name = name.Replace(prefix, "");
+            }
+            mi.TVShowName = name;
+            return mi;
+        }
+
+        public MediaInfo CleanupName(MediaInfo mi)
+        {
+            string name = mi.TVShowName;
+            name = name.Replace(".", " ").Replace("   ", " ").Replace("  ", " ");
+            name = name.TrimEnd();
+            name = name.TrimStart();
+            mi.TVShowName = name;
+            return mi;
         }
     }
 
