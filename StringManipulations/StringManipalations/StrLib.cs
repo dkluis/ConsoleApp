@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System;
-//using DisplayLib;
+using UILib;
 
 
 namespace StringManipulations
@@ -16,31 +16,31 @@ namespace StringManipulations
     {
         public string[] ValidateRegex(string regexin, string stringin, bool debug)
         {
-            //Display disp = new Display();
+            Display disp = new Display();
 
-            regexin = $"(.{regexin}.)";
+            regexin = $"({regexin})";
             try
             {
                 string[] splitcollection = Regex.Split(stringin, regexin);
 
                 if (debug)
                 {
-                    Console.SetCursorPosition(20, 20);
+
                     if (splitcollection.Length == 1)
                     {
-                        Console.WriteLine("No match found");
+                        disp.DisplayText(20,20, "No match found");
                     }
                     else
                     {
                         if (splitcollection.Length != 3)
                         {
-                            Console.WriteLine($"Found an unexpected number of matches {splitcollection.Length}");
+                            disp.DisplayText(20, 20, $"Found an unexpected number of matches {splitcollection.Length}");
                         }
                     }
 
                     foreach (string str in splitcollection)
                     {
-                        Console.WriteLine(str);
+                        disp.DisplayText(20,20, splitcollection.ToString());
                     }
                 }
 

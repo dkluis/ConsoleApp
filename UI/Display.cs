@@ -1,12 +1,19 @@
 ﻿using System;
 
-namespace DisplayLib
+namespace UILib
 {
+    class UILib
+    {
+        static void Main()
+        {
+        }
+    }
+
     /// <summary>
     /// Class to handle all Console writing and reading
     /// Used to learn putting a class into it's own file and use from elsewhere in the solution
     /// </summary>
-    class Display
+    public class Display
     {
         /// <summary>
         /// 

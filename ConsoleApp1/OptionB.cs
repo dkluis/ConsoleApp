@@ -1,4 +1,4 @@
-﻿using DisplayLib;
+﻿using UILib;
 
 namespace ConsoleApp
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-using DisplayLib;
+using UILib;
 
 namespace ConsoleApp
 {
@@ -44,13 +44,12 @@ namespace ConsoleApp
                         Environment.Exit(0);
                         break;
                     case "a":
-                        display.DisplayText(display.xleftStatusMsg, display.yStatus, "A. Do Something                 ");
                         OptionA optionA = new OptionA();
                         optionA.Main2();
                         display.DisplayProgramMenu(true);
                         break;
                     case "b":
-                        display.DisplayText(display.xleftStatusMsg, display.yStatus, "B. Do Something Else            ");
+                        display.DisplayText(display.xleftStatusMsg, display.yStatus, "b. Do Something Else            ");
                         OptionB optionB = new OptionB();
                         optionB.Main3();
                         display.DisplayProgramMenu(true);

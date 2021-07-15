@@ -1,5 +1,6 @@
 ﻿using StringManipulations;
-using DisplayLib;
+using System;
+using UILib;
 
 namespace ConsoleApp
 {
@@ -36,6 +37,13 @@ namespace ConsoleApp
                 if (result[0] == InspectionString)
                 {
                     disp.DisplayText(disp.xleftStatusMsg, disp.yStatus, "Pattern not found in the string");
+                }
+                else
+                {
+                    foreach (string item in result)
+                    {
+                        Console.WriteLine(item);
+                    }
                 }
 
                 Looper = disp.GetInput(0, 1, "Hit q: ");
