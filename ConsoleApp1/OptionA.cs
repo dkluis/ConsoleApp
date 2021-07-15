@@ -14,8 +14,8 @@ namespace ConsoleApp
             while (Looper != "q")
             {
                 string Pattern = "";
-                string InspectionString = "";
-                disp.DisplayOptionAScreen(true);
+                string InspectionString = "Find a pattern in a string";
+                disp.DisplayOptionScreen("", true);
                 disp.DisplayText(disp.xLeftCol1, disp.yTop, "Enter a pattern (regex): ");
                 disp.DisplayText(disp.xLeftCol1, disp.yTop + 1, "Enter a string.........: ");
                 Pattern = disp.GetInput(disp.xLeftCol1, disp.yTop, "Enter a pattern (regex): ");

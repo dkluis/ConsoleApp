@@ -42,7 +42,7 @@ namespace UILib
             }
             DisplayText(xLeftCol1, yTitle, "Simple Main Menu");
             DisplayText(xLeftCol1, yTop, "a. Find a pattern in a string");
-            DisplayText(xLeftCol1, yTop + 1, "b. Do Something Else");
+            DisplayText(xLeftCol1, yTop + 1, "b. Break out the Media name");
             DisplayText(xleftCol2, yTop, "c. Do Another Thing");
             DisplayText(xleftCol2, yTop + 1, "d. Yet Another Thingy");
             DisplayText(xleftOther, yInput + 1, "(q - Quit)");
@@ -53,13 +53,13 @@ namespace UILib
         /// 
         /// </summary>
         /// <param name="refresh"></param>
-        public void DisplayOptionAScreen(bool refresh)
+        public void DisplayOptionScreen(string title, bool refresh)
         {
             if (refresh)
             {
                 Console.Clear();
             }
-            DisplayText(xLeftCol1, yTitle, "Find a pattern in a string");
+            DisplayText(xLeftCol1, yTitle, title);
 
             DisplayText(xleftOther, yInput + 1, "(q - Quit)");
             DisplayText(xleftOther, yStatus, "Status:");
