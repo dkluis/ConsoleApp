@@ -34,7 +34,29 @@ namespace ConsoleApp
                 display.DisplayProgramMenu(false);
                 display.DisplayText(0, 0, cmdline);
                 display.DisplayText(40, 0, Environment.MachineName.ToString());
-         
+
+                OperatingSystem os = Environment.OSVersion;
+                PlatformID pid = os.Platform;
+                switch (pid)
+                {
+                    case PlatformID.Win32NT:
+                    case PlatformID.Win32S:
+                    case PlatformID.Win32Windows:
+                    case PlatformID.WinCE:
+                        Console.WriteLine("I'm on windows!");
+                        break;
+                    case PlatformID.Unix:
+                        Console.WriteLine("I'm a linux box!");
+                        break;
+                    case PlatformID.MacOSX:
+                        Console.WriteLine("I'm a mac!");
+                        break;
+                    default:
+                        Console.WriteLine("No Idea what I'm on!");
+                        break;
+                }
+
+
                 if (looper == "")
                 {
                     looper = display.GetInput(display.xleftOther, display.yInput, "Input: ");
