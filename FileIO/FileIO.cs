@@ -11,6 +11,23 @@ namespace FileIO
 
         public class TextFile
         {
+            private string FileName;
+            private string FilePath;
+
+            public TextFile(string File = "consoleapp.txt", string Path = "")
+            {
+                FileName = File;
+                if (Path == "")
+                {
+                    FilePath = Environment.CurrentDirectory;
+                    
+                }
+                else
+                {
+                    FilePath = Path;
+                }
+            }
+
             public bool FileExistCreate(string file, bool create)
             {
                 bool exist = false;

@@ -33,6 +33,7 @@ namespace ConsoleApp
             {
                 display.DisplayProgramMenu(false);
                 display.DisplayText(0, 0, cmdline);
+                display.DisplayText(0, 0, Environment.OSVersion.ToString());
                 if (looper == "")
                 {
                     looper = display.GetInput(display.xleftOther, display.yInput, "Input: ");
