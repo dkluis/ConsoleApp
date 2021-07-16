@@ -31,7 +31,7 @@ namespace FileHandling
                     FilePath = Path.Join(@"C:\Users\Dick", FileName);
                     break;
                 case "Linux":
-                    FilePath = Path.Join(@"~/", FileName);
+                    FilePath = Path.Join(@"/Users/Dick", FileName);
                     break;
                 default:
                     FilePath = Path.Join(WorkingPath, FileName);
