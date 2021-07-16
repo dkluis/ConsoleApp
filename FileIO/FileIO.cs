@@ -1,61 +1,102 @@
 ﻿using System;
 using System.IO;
 
-namespace FileIO
+namespace FileHandling
 {
-    class FileIO
+    class Files
     {
-        static void Main4()
+        static void Main()
         {
         }
+    }
 
-        public class TextFile
+    public class TextFile
+    {
+        public string FileName;
+        public string FilePath;
+        public string WorkingPath;
+        public string UserName;
+
+        public TextFile(string File = "ConsoleAppConfig.txt")
         {
-            private string FileName;
-            private string FilePath;
+            FileName = File;
+            WorkingPath = Environment.CurrentDirectory;
+            UserName = Environment.UserName;
 
-            public TextFile(string File = "consoleapp.txt", string Path = "")
+            EnvInfo ei = new EnvInfo();
+
+            switch (ei.OS)
             {
-                FileName = File;
-                if (Path == "")
-                {
-                    FilePath = Environment.CurrentDirectory;
-                    
-                }
-                else
-                {
-                    FilePath = Path;
-                }
+                case "Windows":
+                    FilePath = Path.Join(@"C:\Users\Dick", FileName);
+                    break;
+                case "Linux":
+                    FilePath = Path.Join(@"~/", FileName);
+                    break;
+                default:
+                    FilePath = Path.Join(WorkingPath, FileName);
+                    break;
             }
+        }
 
-            public bool FileExistCreate(string file, bool create)
+        public bool FileExistCreate(string file, bool create)
+        {
+            bool exist = false;
+            if (!File.Exists(file))
             {
-                bool exist = false;
-                if (!File.Exists(file))
+                if (create)
                 {
-                    if (create)
-                    {
-                        File.Create(file);
-                        exist = true;
-                    }
-                }
-                else
-                {
+                    File.Create(file);
                     exist = true;
                 }
-                return exist;
             }
-
-            public void WriteLines(string[] line, bool appending)
+            else
             {
-                // File.WriteAllLines("Config.txt", line, append: appending);
+                exist = true;
             }
+            return exist;
+        }
 
-            public string[] ReadLines()
+        public void WriteLines(string[] line, bool appending)
+        {
+            // File.WriteAllLines("Config.txt", line, append: appending);
+        }
+
+        public string[] ReadLines()
+        {
+            String[] text = File.ReadAllLines("Config.txt");
+            return text;
+        }
+    }
+
+    public class EnvInfo
+    {
+        public readonly string OS;
+        public readonly string MachineName;
+
+        public EnvInfo()
+        {
+            OperatingSystem os = Environment.OSVersion;
+            PlatformID pid = os.Platform;
+            switch (pid)
             {
-                String[] text = File.ReadAllLines("Config.txt");
-                return text;
+                case PlatformID.Win32NT:
+                case PlatformID.Win32S:
+                case PlatformID.Win32Windows:
+                case PlatformID.WinCE:
+                    OS = "Windows";
+                    break;
+                case PlatformID.Unix:
+                case PlatformID.MacOSX:
+                    OS = "Linux";
+                    break;
+                default:
+                    OS = "Unknown";
+                    break;
             }
+            MachineName = Environment.MachineName.ToString();
         }
     }
 }
+
+

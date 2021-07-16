@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FileIO\FileIO.csproj" />
     <ProjectReference Include="..\StringManipulations\StringManipalations\StringManipulations.csproj" />
     <ProjectReference Include="..\UI\UI.csproj" />
   </ItemGroup>

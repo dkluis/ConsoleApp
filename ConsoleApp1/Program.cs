@@ -1,5 +1,6 @@
 ﻿using System;
 using UILib;
+using FileHandling;
 
 namespace ConsoleApp
 {
@@ -33,29 +34,6 @@ namespace ConsoleApp
             {
                 display.DisplayProgramMenu(false);
                 display.DisplayText(0, 0, cmdline);
-                display.DisplayText(40, 0, Environment.MachineName.ToString());
-
-                OperatingSystem os = Environment.OSVersion;
-                PlatformID pid = os.Platform;
-                switch (pid)
-                {
-                    case PlatformID.Win32NT:
-                    case PlatformID.Win32S:
-                    case PlatformID.Win32Windows:
-                    case PlatformID.WinCE:
-                        Console.WriteLine("I'm on windows!");
-                        break;
-                    case PlatformID.Unix:
-                        Console.WriteLine("I'm a linux box!");
-                        break;
-                    case PlatformID.MacOSX:
-                        Console.WriteLine("I'm a mac!");
-                        break;
-                    default:
-                        Console.WriteLine("No Idea what I'm on!");
-                        break;
-                }
-
 
                 if (looper == "")
                 {
@@ -73,10 +51,14 @@ namespace ConsoleApp
                         display.DisplayProgramMenu(true);
                         break;
                     case "b":
-                        display.DisplayText(display.xleftStatusMsg, display.yStatus, "b. Do Something Else            ");
                         OptionB optionB = new OptionB();
                         optionB.Main3();
                         display.DisplayProgramMenu(true);
+                        break;
+                    case "c":
+                        TextFile config = new TextFile();
+                        bool success = config.FileExistCreate(config.FilePath, true);
+                        display.DisplayText(20, 20, $"File Create is: {success}");
                         break;
                     default:
                         display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");
