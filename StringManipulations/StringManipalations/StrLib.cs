@@ -14,7 +14,7 @@ namespace StringManipulations
 
     public class StrMani
     {
-        public string[] MediaPatterns = new string[] { "[sS][0-9][0-9][eE][0-9[0-9]", "[sS][0-9][eE][0-9]", "[sS][0-9][0-9]", "[sS][0-9]", "season[ .][0-9]", "season[ .][0-9][0-9]" };
+        public string[] MediaPatterns = new string[] { "[sS][0-9]+[eE][0-9]+", "[sS][0-9]+", "season[ .][0-9]+" };
         public string[] MediaFormats = new string[] { ".mkv", ".mp4" };
         public string[] MediaEliminators = new string[] {"www", "rarbg" };
 

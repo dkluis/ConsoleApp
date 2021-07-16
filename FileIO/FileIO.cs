@@ -29,7 +29,7 @@ namespace FileIO
                 return exist;
             }
 
-            public void WriteText(string[] line, bool appending)
+            public void WriteLines(string[] line, bool appending)
             {
                 // File.WriteAllLines("Config.txt", line, append: appending);
             }
