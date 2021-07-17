@@ -1,6 +1,5 @@
 ﻿using System.Text.RegularExpressions;
 using System;
-using UILib;
 
 
 namespace StringManipulations
@@ -20,8 +19,6 @@ namespace StringManipulations
 
         public string[] ValidateRegex(string regexin, string stringin)
         {
-            Display disp = new Display();
-
             regexin = $"({regexin})";
             try
             {

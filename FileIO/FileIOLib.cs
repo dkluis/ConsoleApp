@@ -1,54 +1,61 @@
 ﻿using System;
 using System.IO;
 
-namespace FileHandling
+namespace FileIOLib
 {
-    class Files
+    class Program
     {
         static void Main()
         {
         }
     }
 
-    public class TextFile
+    public class FileIO
     {
-        public string FileName;
-        public string FilePath;
-        public string WorkingPath;
-        public string UserName;
+        protected string FileName;
+        protected string FilePath;
+        public string Drive;
+        protected string FullFileName;
 
-        public TextFile(string File = "ConsoleAppConfig.txt")
+        protected string WorkingPath;
+        protected string UserName;
+
+        protected bool Initialized;
+        protected bool FileExists;
+
+        public FileIO()
         {
-            FileName = File;
-            WorkingPath = Environment.CurrentDirectory;
-            UserName = Environment.UserName;
+            Initialized = false;
+            FileExists = false;
 
             EnvInfo ei = new EnvInfo();
-
-            switch (ei.OS)
-            {
-                case "Windows":
-                    FilePath = Path.Join(@"C:\Users\Dick", FileName);
-                    break;
-                case "Linux":
-                    FilePath = Path.Join(@"/Users/Dick", FileName);
-                    break;
-                default:
-                    FilePath = Path.Join(WorkingPath, FileName);
-                    break;
-            }
+            WorkingPath = ei.WorkingPath;
+            UserName = ei.UserName;
+            Drive = ei.Drive;
         }
 
-        public bool FileExistCreate(string file, bool create)
+        public (bool, string) Initialize(string[] FilePathIn, string File)
+        {
+            bool success = false;
+            FullFileName = Path.Combine(FilePathIn);
+            FullFileName = Path.Join(Drive, FullFileName); 
+            FullFileName = Path.Join(FullFileName, File);
+            if (Exists())
+            {
+                FileExists = true;
+                success = true;
+                Initialized = true;
+            }
+            return (success, FullFileName);
+        }
+
+        private bool Exists()
         {
             bool exist = false;
-            if (!File.Exists(file))
+            if (!File.Exists(FullFileName))
             {
-                if (create)
-                {
-                    File.Create(file);
-                    exist = true;
-                }
+                File.Create(FullFileName);
+                exist = true;
             }
             else
             {
@@ -73,6 +80,9 @@ namespace FileHandling
     {
         public readonly string OS;
         public readonly string MachineName;
+        public readonly string UserName;
+        public readonly string WorkingPath;
+        public string Drive;
 
         public EnvInfo()
         {
@@ -85,18 +95,21 @@ namespace FileHandling
                 case PlatformID.Win32Windows:
                 case PlatformID.WinCE:
                     OS = "Windows";
+                    Drive = @"C:";
                     break;
                 case PlatformID.Unix:
                 case PlatformID.MacOSX:
                     OS = "Linux";
+                    Drive = @"/";
                     break;
                 default:
                     OS = "Unknown";
+                    Drive = "Unknown";
                     break;
             }
             MachineName = Environment.MachineName.ToString();
+            WorkingPath = Environment.CurrentDirectory;
+            UserName = Environment.UserName;
         }
     }
 }
-
-

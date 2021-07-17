@@ -1,6 +1,6 @@
 ﻿using System;
 using UILib;
-using FileHandling;
+using FileIOLib;
 
 namespace ConsoleApp
 {
@@ -56,9 +56,11 @@ namespace ConsoleApp
                         display.DisplayProgramMenu(true);
                         break;
                     case "c":
-                        TextFile config = new TextFile();
-                        bool success = config.FileExistCreate(config.FilePath, true);
-                        display.DisplayText(20, 20, $"File Create is: {success}");
+                        FileIO config = new FileIO();
+                        string[] FilePath = { "", "Users", "Dick" };
+                        string File = "ConsoleAppConfig.txt";
+                        (bool success, string FFP) = config.Initialize(FilePath, File);
+                        display.DisplayText(20, 20, $"File Create is: {success} at {FFP}");
                         break;
                     default:
                         display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");
