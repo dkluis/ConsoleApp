@@ -60,7 +60,12 @@ namespace ConsoleApp
                         string[] FilePath = { "", "Users", "Dick" };
                         string File = "ConsoleAppConfig.txt";
                         (bool success, string FFP) = config.Initialize(FilePath, File);
-                        display.DisplayText(20, 20, $"File Create is: {success} at {FFP}");
+                        display.DisplayText(20, 20, $"File Create is: {success} at {FFP}\n");
+                        string[] result = config.ReadLines();
+                        foreach (string line in result)
+                        {
+                            Console.WriteLine($"...: {line}...");
+                        }
                         break;
                     default:
                         display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");

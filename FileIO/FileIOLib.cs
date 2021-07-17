@@ -71,7 +71,7 @@ namespace FileIOLib
 
         public string[] ReadLines()
         {
-            String[] text = File.ReadAllLines("Config.txt");
+            String[] text = File.ReadAllLines(FullFileName);
             return text;
         }
     }
