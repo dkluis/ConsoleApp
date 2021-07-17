@@ -82,7 +82,7 @@ namespace FileIOLib
         public readonly string MachineName;
         public readonly string UserName;
         public readonly string WorkingPath;
-        protected string Drive;
+        public readonly string Drive;
 
         public EnvInfo()
         {
