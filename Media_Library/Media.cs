@@ -4,40 +4,21 @@ namespace Media_Library
 {
     public class Media
     {
-        protected int Id;
-
         public Media()
         {
         }
 
-        protected string Name
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        protected int MediaID;
+        protected string MediaName;
+        protected string MediaDescription;
+        protected MediaTypes MediaType;
+        protected string PlexPath;
+        protected string PlexFullPath;
 
-        protected string Description
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        protected int Type
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        protected int GetNextID()
+        protected void GetNextID()
         {
             Console.WriteLine("Media:GetNextID");
-            return 1;
+            MediaID = 1;
         }
 
         protected void StoreID()

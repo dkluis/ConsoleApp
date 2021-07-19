@@ -6,5 +6,6 @@ namespace Media_Library
 {
     interface TVMaze
     {
+        int TVMazeID { get; set; }
     }
 }

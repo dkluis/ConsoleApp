@@ -4,19 +4,25 @@ using System.Text;
 
 namespace Media_Library
 {
-    public class TVShow : Media, TVMaze, Serie, Plex
+    public class TVShow : Media, TVMaze, Serie
     {
-        public TVShow(string name, string description)
+        public TVShow(string name, string description, MediaTypes mediatype, int tvmazeid)
         {
-            Name = name;
-            Description = description;
+            MediaName = name;
+            MediaDescription = description;
+            MediaType = mediatype;
+            TVMazeID = tvmazeid;
             GetNextID();
-            // StoreID();
         }
 
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Position { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Path { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string FullFilePath { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int TVMazeID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public bool SaveTVShow()
+        {
+            //Write to DB
+            return true;
+        }
     }
 }

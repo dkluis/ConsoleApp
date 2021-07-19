@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Media_Library
 {
-    public class Movie : Media, Serie, Plex
+    public class Movie : Media, Serie
     {
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Position { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Path { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string FullFilePath { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

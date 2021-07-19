@@ -3,14 +3,14 @@
   <Class Name="Media_Library.Media">
     <Position X="5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgABAAAAAAAAQAABAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABgAAAAAAAAAQBAAAAAEAEAAAAAgAAA=</HashCode>
       <FileName>Media.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Media_Library.TVShow">
     <Position X="6.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIgAAAAAAAAAABAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TVShow.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.19" />
@@ -18,7 +18,7 @@
   <Class Name="Media_Library.Movie">
     <Position X="4" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIgAAAAAAAAAABAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Movie.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -26,7 +26,7 @@
   <Class Name="Media_Library.Book">
     <Position X="1.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIgAAAAAAAAAABAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Book.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -34,7 +34,7 @@
   <Class Name="Media_Library.Music">
     <Position X="8.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Music.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -49,14 +49,14 @@
   <Interface Name="Media_Library.Serie" Collapsed="true">
     <Position X="11" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Serie.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Media_Library.TVMaze" Collapsed="true">
     <Position X="12.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TVMaze.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -67,13 +67,6 @@
       <FileName>GoodRead.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Media_Library.Plex" Collapsed="true">
-    <Position X="14.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
-      <FileName>Plex.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="Media_Library.Album" Collapsed="true">
     <Position X="11" Y="1.75" Width="1.5" />
     <TypeIdentifier>
@@ -81,5 +74,12 @@
       <FileName>Album.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Enum Name="Media_Library.MediaTypes" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACEAAAAAEARAAAgAAAAAAAAAAAAAAEAAAAAAABA=</HashCode>
+      <FileName>MediaTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

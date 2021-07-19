@@ -7,6 +7,6 @@ namespace Media_Library
     public interface Serie
     {
         string SerieName { get; set; }
-        int Position { get; set; }
+        int SeriePosition { get; set; }
     }
 }
