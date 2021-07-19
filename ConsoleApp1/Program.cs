@@ -14,6 +14,7 @@ namespace ConsoleApp
             Display display = new Display();
 
             ///*
+            Media media1 = new Media();
             TVShow show1 = new TVShow("Name", "Description");
             Book book1 = new Book();
             Movie movie1 = new Movie();

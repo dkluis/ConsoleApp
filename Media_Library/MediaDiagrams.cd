@@ -3,7 +3,7 @@
   <Class Name="Media_Library.Media">
     <Position X="5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgABAAAAAAAAQAABAAAEAAAQAAAAAAAgA=</HashCode>
+      <HashCode>AAACAAAAAAAgABAAAAAAAAQAABAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Media.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -46,7 +46,7 @@
       <FileName>MediaInfo.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="Media_Library.Serie">
+  <Interface Name="Media_Library.Serie" Collapsed="true">
     <Position X="11" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
@@ -67,7 +67,7 @@
       <FileName>GoodRead.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Media_Library.Plex">
+  <Interface Name="Media_Library.Plex" Collapsed="true">
     <Position X="14.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>

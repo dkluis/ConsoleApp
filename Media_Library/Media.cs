@@ -10,7 +10,7 @@ namespace Media_Library
         {
         }
 
-        public string Name
+        protected string Name
         {
             get => default;
             set
@@ -18,7 +18,7 @@ namespace Media_Library
             }
         }
 
-        public string Description
+        protected string Description
         {
             get => default;
             set
@@ -26,7 +26,7 @@ namespace Media_Library
             }
         }
 
-        private int Type
+        protected int Type
         {
             get => default;
             set
@@ -43,11 +43,6 @@ namespace Media_Library
         protected void StoreID()
         {
             Console.WriteLine("Media:StoreID");
-        }
-
-        public MediaInfo GetInfo()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Media_Library
             Name = name;
             Description = description;
             GetNextID();
-            StoreID();
+            // StoreID();
         }
 
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
