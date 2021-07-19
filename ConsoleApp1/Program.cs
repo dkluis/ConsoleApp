@@ -13,13 +13,13 @@ namespace ConsoleApp
             string looper = "";
             Display display = new Display();
 
-            /*
-            TVShow show1 = new TVShow();
+            ///*
+            TVShow show1 = new TVShow("Name", "Description");
             Book book1 = new Book();
             Movie movie1 = new Movie();
             Music music1 = new Music();
             Environment.Exit(1);
-            */
+            //*/
 
             if (args.Length < 1)
             {

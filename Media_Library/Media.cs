@@ -4,24 +4,10 @@ namespace Media_Library
 {
     public class Media
     {
-        private int id;
+        protected int Id;
 
         public Media()
         {
-            id = GetNextID();
-        }
-
-        public Media(string name = null, string description = null)
-        {
-            if (name != null)
-            {
-                Name = name;
-            }
-            if (description != null)
-            {
-                Description = description;
-            }
-            StoreID();
         }
 
         public string Name
@@ -48,13 +34,13 @@ namespace Media_Library
             }
         }
 
-        private int GetNextID()
+        protected int GetNextID()
         {
             Console.WriteLine("Media:GetNextID");
             return 1;
         }
 
-        private void StoreID()
+        protected void StoreID()
         {
             Console.WriteLine("Media:StoreID");
         }
