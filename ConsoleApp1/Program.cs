@@ -1,6 +1,7 @@
 ﻿using System;
 using UILib;
 using FileIOLib;
+using Media_Library;
 
 namespace ConsoleApp
 {
@@ -11,6 +12,14 @@ namespace ConsoleApp
             string cmdline = "";
             string looper = "";
             Display display = new Display();
+
+            /*
+            TVShow show1 = new TVShow();
+            Book book1 = new Book();
+            Movie movie1 = new Movie();
+            Music music1 = new Music();
+            Environment.Exit(1);
+            */
 
             if (args.Length < 1)
             {
@@ -57,10 +66,12 @@ namespace ConsoleApp
                         break;
                     case "c":
                         FileIO config = new FileIO();
-                        string[] FilePath = { "", "Users", "Dick" };
+                        string[] FilePath = { "Users", "Dick" };
                         string File = "ConsoleAppConfig.txt";
+                        
                         (bool success, string FFP) = config.Initialize(FilePath, File);
                         display.DisplayText(20, 20, $"File Create is: {success} at {FFP}\n");
+
                         string[] result = config.ReadLines();
                         foreach (string line in result)
                         {

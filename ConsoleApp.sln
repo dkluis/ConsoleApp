@@ -4,12 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp1\ConsoleApp.csproj", "{E26A966A-07E8-4DB7-928C-A604C2F927D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C877EC43-0072-4563-B77C-A5855EF13248} = {C877EC43-0072-4563-B77C-A5855EF13248}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringManipulations", "StringManipulations\StringManipalations\StringManipulations.csproj", "{3220A42F-7EDD-4C5C-A2BA-CACAA9E5F8FD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{BC61BC45-18F8-4392-8B6C-01021AE9F5CD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileIO", "FileIO\FileIO.csproj", "{79784A9C-DE77-4048-8417-556316311285}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Media_Library", "Media_Library\Media_Library.csproj", "{C877EC43-0072-4563-B77C-A5855EF13248}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{79784A9C-DE77-4048-8417-556316311285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79784A9C-DE77-4048-8417-556316311285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79784A9C-DE77-4048-8417-556316311285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C877EC43-0072-4563-B77C-A5855EF13248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C877EC43-0072-4563-B77C-A5855EF13248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C877EC43-0072-4563-B77C-A5855EF13248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C877EC43-0072-4563-B77C-A5855EF13248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

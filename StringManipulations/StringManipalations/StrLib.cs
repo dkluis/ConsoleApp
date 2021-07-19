@@ -6,7 +6,7 @@ namespace StringManipulations
 {
     class StrLib
     {
-        static void Main()
+        private static void Main()
         {   
         }
     }
