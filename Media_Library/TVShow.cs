@@ -22,7 +22,6 @@ namespace Media_Library
         }
 
         public int TVMazeID { get; set; }
-        public string TVMazeEpisode { get; set; }
         public string TVMazeSerieStatus { get; set; }
 
         public override bool Save()
