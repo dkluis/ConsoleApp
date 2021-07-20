@@ -4,11 +4,12 @@ using System.Text;
 
 namespace Media_Library
 {
-    interface TVMaze
+    class TVmaze
     {
-        int TVMazeID { get; set; }
-        int TVMazeEpisode { get; set; }
-        string TVMazeSerieStatus { get; set; }
-
+        protected (bool, int) FindShow(string name)
+        {
+            Console.WriteLine($"Finding a Show on TVMaze via API {name}");
+            return (true, 1);
+        }
     }
 }

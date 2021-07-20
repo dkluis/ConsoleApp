@@ -16,4 +16,23 @@ namespace Media_Library
         MusicAlbum,
         Unknown
     }
+
+    class MediaTypeUtils
+    {
+        public string ConvertMediaTypeToString(MediaTypes mediatype)
+        {
+            return mediatype.ToString();
+        }
+
+        public int ConvertMediaTypeToInt(MediaTypes mediatype)
+        {
+            return Convert.ToInt32(mediatype);
+        }
+
+        public MediaTypes ParseStringToMediaType(string mediatype)
+        {
+            MediaTypes md = (MediaTypes)Enum.Parse(typeof(MediaTypes), mediatype, true);
+            return md;
+        }
+    }
 }

@@ -29,5 +29,21 @@ namespace Media_Library
             Console.WriteLine("Media Class: PlexMove");
             return true;
         }
+
+        public virtual MediaInfo GetMediaInfo()
+        {
+            MediaInfo returnvalue = new MediaInfo();
+            return returnvalue; 
+        }
+
+        public virtual void DisplayMediaInfo()
+        {
+            Console.WriteLine($"MediaID: {MediaID}");
+            Console.WriteLine($"MediaName: {MediaName}");
+            Console.WriteLine($"MediaDescription: {MediaDescription}");
+            Console.WriteLine($"MediaType: {MediaType.ToString()}");
+            Console.WriteLine($"PlexPath: {PlexPath}");
+            Console.WriteLine($"PlexFullPath: {PlexFullPath}");
+        }
     }
 }

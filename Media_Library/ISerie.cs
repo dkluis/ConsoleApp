@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Media_Library
 {
-    public interface Serie
+    public interface ISerie
     {
         string SerieName { get; set; }
-        int SeriePosition { get; set; }
+        double SeriePosition { get; set; }
     }
 }

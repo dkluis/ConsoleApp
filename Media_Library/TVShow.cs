@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Media_Library
 {
-    public class TVShow : Media, TVMaze, Serie
+    public class TVShow : Media, ITVMaze
     {
         public TVShow(string name, string description, MediaTypes mediatype, int tvmazeid)
         {
@@ -16,8 +16,6 @@ namespace Media_Library
             Console.WriteLine("TVShow Class: Constructor");
         }
 
-        public string SerieName { get; set; }
-        public int SeriePosition { get; set; }
         public int TVMazeID { get; set; }
         public int TVMazeEpisode { get; set; }
         public string TVMazeSerieStatus { get; set; }
@@ -35,9 +33,9 @@ namespace Media_Library
             return base.PlexMove();
         }
 
-        public void DisplayTVShow()
+        public override void DisplayMediaInfo()
         {
-            Console.WriteLine($"Name: {MediaName}, Description: {MediaDescription}, Type: {MediaType}");
+            base.DisplayMediaInfo();
             Console.WriteLine($"Serie Name: {SerieName}, Serie Pos: {SeriePosition}");
             Console.WriteLine($"TVMaze ID: {TVMazeID}, TVMaze Serie Status: {TVMazeSerieStatus}");
 

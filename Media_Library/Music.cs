@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Media_Library
 {
-    public class Music : Media, Album
+    public class Music : Media, IAlbum
     {
         public string AlbumName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int AlbumTrack { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

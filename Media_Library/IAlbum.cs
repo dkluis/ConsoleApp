@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Media_Library
 {
-    interface GoodRead
+    public interface IAlbum
     {
+        string AlbumName { get; set; }
+        int AlbumTrack { get; set; }
     }
 }

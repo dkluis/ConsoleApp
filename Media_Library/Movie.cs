@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Media_Library
 {
-    public class Movie : Media, Serie
+    public class Movie : Media, ISerie
     {
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
