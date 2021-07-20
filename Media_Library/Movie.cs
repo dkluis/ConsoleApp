@@ -7,7 +7,7 @@ namespace Media_Library
     public class Movie : Media, ISerie
     {
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public double SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override bool Save()
         {
@@ -15,6 +15,4 @@ namespace Media_Library
             return base.Save();
         }
     }
-
-
 }
