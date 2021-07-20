@@ -6,6 +6,11 @@ namespace Media_Library
 {
     public class TVShow : Media, ITVMaze
     {
+        public TVShow()
+        {
+
+        }
+
         public TVShow(string name, string description, MediaTypes mediatype, int tvmazeid)
         {
             MediaName = name;
@@ -17,7 +22,7 @@ namespace Media_Library
         }
 
         public int TVMazeID { get; set; }
-        public int TVMazeEpisode { get; set; }
+        public string TVMazeEpisode { get; set; }
         public string TVMazeSerieStatus { get; set; }
 
         public override bool Save()
@@ -36,7 +41,6 @@ namespace Media_Library
         public override void DisplayMediaInfo()
         {
             base.DisplayMediaInfo();
-            Console.WriteLine($"Serie Name: {SerieName}, Serie Pos: {SeriePosition}");
             Console.WriteLine($"TVMaze ID: {TVMazeID}, TVMaze Serie Status: {TVMazeSerieStatus}");
 
         }

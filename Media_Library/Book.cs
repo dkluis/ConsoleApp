@@ -6,7 +6,7 @@ namespace Media_Library
 {
     public class Book : Media, IGoodRead, ISerie
     {
-        public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public double SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override bool Save()

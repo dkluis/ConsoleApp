@@ -46,6 +46,13 @@
       <FileName>MediaInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Media_Library.Episode">
+    <Position X="6.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Episode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Media_Library.ISerie" Collapsed="true">
     <Position X="11.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
