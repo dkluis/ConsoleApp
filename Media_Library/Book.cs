@@ -8,5 +8,11 @@ namespace Media_Library
     {
         public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public override bool Save()
+        {
+            // Book specific save function
+            return base.Save();
+        }
     }
 }

@@ -1,81 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Media_Library.Media">
-    <Position X="5" Y="0.5" Width="1.75" />
+    <Position X="5.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABgAAAAAAAAAQBAAAAAEAEAAAAAgAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAABgAAQAAAAAAQBAAAAAEAEAAAAAgAAA=</HashCode>
       <FileName>Media.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Media_Library.TVShow">
-    <Position X="6.25" Y="4.25" Width="1.5" />
+    <Position X="6.25" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAIAAAAAAAAIAAQAEAAAAAABAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>TVShow.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.19" />
   </Class>
   <Class Name="Media_Library.Movie">
-    <Position X="4" Y="4.25" Width="1.5" />
+    <Position X="4" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Movie.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Media_Library.Book">
-    <Position X="1.75" Y="4.25" Width="1.5" />
+    <Position X="1.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Book.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Media_Library.Music">
-    <Position X="8.5" Y="4.25" Width="1.5" />
+    <Position X="8.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Music.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Struct Name="Media_Library.MediaInfo" Collapsed="true">
-    <Position X="11" Y="0.5" Width="1.5" />
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MediaInfo.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="Media_Library.Serie" Collapsed="true">
-    <Position X="11" Y="2.5" Width="1.5" />
+    <Position X="11.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Serie.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Media_Library.TVMaze" Collapsed="true">
-    <Position X="12.75" Y="2.5" Width="1.5" />
+    <Position X="13" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAIAAAAEAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TVMaze.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Media_Library.GoodRead" Collapsed="true">
-    <Position X="12.75" Y="1.75" Width="1.5" />
+    <Position X="13" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GoodRead.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Media_Library.Album" Collapsed="true">
-    <Position X="11" Y="1.75" Width="1.5" />
+    <Position X="11.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Album.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Media_Library.MediaTypes" Collapsed="true">
-    <Position X="11" Y="3.5" Width="1.5" />
+    <Position X="11.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACACEAAAAAEARAAAgAAAAAAAAAAAAAAEAAAAAAABA=</HashCode>
       <FileName>MediaTypes.cs</FileName>

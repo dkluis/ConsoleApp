@@ -4,10 +4,6 @@ namespace Media_Library
 {
     public class Media
     {
-        public Media()
-        {
-        }
-
         protected int MediaID;
         protected string MediaName;
         protected string MediaDescription;
@@ -17,13 +13,21 @@ namespace Media_Library
 
         protected void GetNextID()
         {
-            Console.WriteLine("Media:GetNextID");
+            Console.WriteLine("Media Class: GetNextID");
             MediaID = 1;
         }
 
-        protected void StoreID()
+        public virtual bool Save()
         {
-            Console.WriteLine("Media:StoreID");
+            // Generic Save function to be overriden for each sub class.
+            Console.WriteLine("Media Class: Save");
+            return true;
+        }
+
+        public virtual bool PlexMove()
+        {
+            Console.WriteLine("Media Class: PlexMove");
+            return true;
         }
     }
 }

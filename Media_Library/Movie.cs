@@ -8,5 +8,13 @@ namespace Media_Library
     {
         public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public override bool Save()
+        {
+            // Movie specific save function
+            return base.Save();
+        }
     }
+
+
 }

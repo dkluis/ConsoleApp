@@ -13,16 +13,34 @@ namespace Media_Library
             MediaType = mediatype;
             TVMazeID = tvmazeid;
             GetNextID();
+            Console.WriteLine("TVShow Class: Constructor");
         }
 
-        public string SerieName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int SeriePosition { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int TVMazeID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string SerieName { get; set; }
+        public int SeriePosition { get; set; }
+        public int TVMazeID { get; set; }
+        public int TVMazeEpisode { get; set; }
+        public string TVMazeSerieStatus { get; set; }
 
-        public bool SaveTVShow()
+        public override bool Save()
         {
-            //Write to DB
+            // TVShow specific save function
+            Console.WriteLine("TVShow Class: Save");
             return true;
+        }
+
+        public override bool PlexMove()
+        {
+            Console.WriteLine("TVShow Class: PlexMove");
+            return base.PlexMove();
+        }
+
+        public void DisplayTVShow()
+        {
+            Console.WriteLine($"Name: {MediaName}, Description: {MediaDescription}, Type: {MediaType}");
+            Console.WriteLine($"Serie Name: {SerieName}, Serie Pos: {SeriePosition}");
+            Console.WriteLine($"TVMaze ID: {TVMazeID}, TVMaze Serie Status: {TVMazeSerieStatus}");
+
         }
     }
 }

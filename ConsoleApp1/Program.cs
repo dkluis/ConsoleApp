@@ -13,15 +13,6 @@ namespace ConsoleApp
             string looper = "";
             Display display = new Display();
 
-            ///*
-            Media media1 = new Media();
-            TVShow show1 = new TVShow("Name", "Description");
-            Book book1 = new Book();
-            Movie movie1 = new Movie();
-            Music music1 = new Music();
-            Environment.Exit(1);
-            //*/
-
             if (args.Length < 1)
             {
                 cmdline = "No Commandline argument passed in";
@@ -78,6 +69,10 @@ namespace ConsoleApp
                         {
                             Console.WriteLine($"...: {line}...");
                         }
+                        break;
+                    case "d":
+                        OptionD optionD = new OptionD(); 
+                        optionD.Main();
                         break;
                     default:
                         display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");

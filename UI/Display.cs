@@ -44,7 +44,7 @@ namespace UILib
             DisplayText(xLeftCol1, yTop, "a. Find a pattern in a string");
             DisplayText(xLeftCol1, yTop + 1, "b. Break out the Media name");
             DisplayText(xleftCol2, yTop, "c. Create File (if not exist) and read it's lines");
-            DisplayText(xleftCol2, yTop + 1, "d. Yet Another Thingy");
+            DisplayText(xleftCol2, yTop + 1, "d. Testing Inheritance, Poly, Interfaces, etc.");
             DisplayText(xleftOther, yInput + 1, "(q - Quit)");
             DisplayText(xleftOther, yStatus, "Status:");
         }
