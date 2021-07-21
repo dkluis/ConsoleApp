@@ -79,7 +79,19 @@ namespace ConsoleApp
                         MariaDB MDb = new MariaDB();
                         MDb.Connect();
                         MDb.Open();
+                        // string sql = "SELECT `key`, info, comments FROM key_values WHERE(`key` = 'email')";
+                        string sql = "SELECT * FROM Key_Values WHERE (`key` = 'email')";
+                        Console.WriteLine($"SQL = {sql}");
+                        MDb.Command(sql);
+                        var Info = MDb.ExecQuery();
+                        Console.WriteLine($"Info FieldCount: {Info.FieldCount}, Has Rows: {Info.HasRows}");
+                        while (Info.Read())
+                        {
+                            Console.WriteLine($"Reading: Key: {Info[0]}, \n Value: {Info[1]}, \n Comment: {Info[2]}");
+                            
+                        }
                         MDb.Close();
+                        display.GetInput(50, 0, "");
                         break;
                     default:
                         display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");
