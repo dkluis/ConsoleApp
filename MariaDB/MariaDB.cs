@@ -5,7 +5,7 @@ namespace Database_Lib
 {
     public class MariaDB
     {
-        private string ConnectionInfo = @"server=ca-server.local; database=Test-TVM-DB; uid=dick; pwd=Sandy3942mmm";
+        private string ConnectionInfo = @"server=ca-server.local; database=Test-TVM-DB; uid=dick; pwd=Sandy3942";
         private MySqlConnection conn;
         private MySqlCommand cmd;
         private MySqlDataReader rdr;
@@ -60,12 +60,25 @@ namespace Database_Lib
         public MySqlDataReader ExecQuery()
         {
             rdr = cmd.ExecuteReader();
+            Console.WriteLine($"Query result has {rdr.Count()} records");
             return rdr;
         }
 
         public void ExecNonQuery()
         {
             cmd.ExecuteNonQuery();
+        }
+    }
+
+    public static class Extensions
+    {
+        public static int Count(this MySqlDataReader dr)
+        {
+            int count = 0;
+            while (dr.Read())
+                count++;
+
+            return count;
         }
     }
 }
