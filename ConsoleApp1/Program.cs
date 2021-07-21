@@ -75,8 +75,11 @@ namespace ConsoleApp
                         optionD.Main();
                         break;
                     case "1":
+                        Console.Clear();
                         MariaDB MDb = new MariaDB();
                         MDb.Connect();
+                        MDb.Open();
+                        MDb.Close();
                         break;
                     default:
                         display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");
