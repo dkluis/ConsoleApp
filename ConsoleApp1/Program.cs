@@ -77,8 +77,18 @@ namespace ConsoleApp
                     case "1":
                         Console.Clear();
                         MariaDB MDb = new MariaDB();
-                        MDb.Connect();
-                        MDb.Open();
+                        success = MDb.Connect();
+                        if (!success)
+                        {
+                            Console.WriteLine($"Did not Connect to mariaDB with exception {MDb.exception}");
+                            Environment.Exit(99);
+                        }
+                        success = MDb.Open();
+                        if (!success)
+                        {
+                            Console.WriteLine($"Did not Open the mariaDB with exception {MDb.exception}");
+                            Environment.Exit(99);
+                        }
                         // string sql = "SELECT `key`, info, comments FROM key_values WHERE(`key` = 'email')";
                         string sql = "SELECT * FROM Key_Values WHERE (`key` = 'email')";
                         Console.WriteLine($"SQL = {sql}");

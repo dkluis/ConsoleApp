@@ -5,21 +5,42 @@ namespace Database_Lib
 {
     public class MariaDB
     {
-        private string ConnectionInfo = @"server=ca-server.local; database=Test-TVM-DB; uid=dick; pwd=Sandy3942";
+        private string ConnectionInfo = @"server=ca-server.local; database=Test-TVM-DB; uid=dick; pwd=Sandy3942mmm";
         private MySqlConnection conn;
         private MySqlCommand cmd;
         private MySqlDataReader rdr;
+        public string exception;
 
-        public void Connect()
+        public bool Connect()
         {
-            conn = new MySqlConnection(ConnectionInfo);
-            Console.WriteLine($"MariaDB is connected with status {conn.State.ToString()}");
+            bool success = true;
+            try
+            {
+                conn = new MySqlConnection(ConnectionInfo);
+                Console.WriteLine($"MariaDB is connected with status {conn.State.ToString()}");
+            }
+            catch (Exception e)
+            {
+                exception = e.Message.ToString();
+                success = false;
+            }
+            return success;
         }
 
-        public void Open()
+        public bool Open()
         {
-            conn.Open();
+            bool success = true;
+            try
+            {
+                conn.Open();
             Console.WriteLine($"MariaDB is Open with status {conn.State.ToString()}");
+            }
+            catch (Exception e)
+            {
+                exception = e.Message.ToString();
+                success = false;
+            }
+            return success;
         }
 
         public void Close()
