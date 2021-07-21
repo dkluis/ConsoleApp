@@ -113,5 +113,19 @@ namespace Database_Lib
 
             return count;
         }
+
+        public static List<MariaDB.Key_Value_Rec> List_KeyValue_Records(this MySqlDataReader dr)
+        {
+            List<MariaDB.Key_Value_Rec> ListofRecords = new List<MariaDB.Key_Value_Rec>();
+            MariaDB.Key_Value_Rec rec = new MariaDB.Key_Value_Rec();
+
+            while (dr.Read())
+            {
+                rec.Fill(dr[0].ToString(), dr[1].ToString(), dr[2].ToString());
+                ListofRecords.Add(rec);
+            }
+            Console.WriteLine($"ListofRecords: {ListofRecords.Count}");
+            return ListofRecords;
+        }
     }
 }
