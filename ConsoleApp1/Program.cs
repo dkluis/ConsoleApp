@@ -89,6 +89,7 @@ namespace ConsoleApp
                             Console.WriteLine($"Did not Open the mariaDB with exception {MDb.exception}");
                             Environment.Exit(99);
                         }
+
                         // string sql = "SELECT `key`, info, comments FROM key_values WHERE(`key` = 'email')";
                         string sql = "SELECT * FROM Key_Values WHERE (`key` = 'email')";
                         // string sql = "SELECT * FROM Key_Values";
@@ -104,6 +105,23 @@ namespace ConsoleApp
                             Console.WriteLine($"Reading via index: Key: {Info[0]}, Info: {Info[1]}, Comment: {Info[2]}");
                             Console.WriteLine($"Reading via field name: Key: {rec.key}, Info: {rec.info}, Comment: {rec.comment}");
                         }
+
+                        MDb.Close();
+                        MDb.Open();
+
+                        sql = "select * from download_options order by providername asc";
+                        MDb.Command(sql);
+                        var dlo = MDb.ExecQuery();
+                        while (dlo.Read())
+                        {
+                            MariaDB.Download_Options_Rec rec = new MariaDB.Download_Options_Rec();
+                            rec.Fill(dlo[0].ToString(), dlo[1].ToString(), dlo[2].ToString(), dlo[3].ToString());
+                            Console.WriteLine($"{rec.providername.PadRight(20)} " +
+                                $"### {rec.link_prefix.PadRight(70)} " +
+                                $"### {rec.suffixlink.PadRight(40)} " +
+                                $"### {rec.searchchar}");
+                        }
+
                         MDb.Close();
                         display.GetInput(50, 0, "");
                         break;
