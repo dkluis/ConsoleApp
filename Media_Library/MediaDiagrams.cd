@@ -8,9 +8,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Media_Library.TVShow">
-    <Position X="6.25" Y="4.5" Width="1.75" />
+    <Position X="6.25" Y="4.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>EAAAAIAAAAAAAAIAAQAEAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAIAAAAAAAAAAAQAEAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TVShow.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.19" />
@@ -47,7 +47,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Media_Library.Episode">
-    <Position X="6.25" Y="7.5" Width="1.75" />
+    <Position X="6.25" Y="7.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Episode.cs</FileName>
@@ -63,7 +63,7 @@
   <Interface Name="Media_Library.ITVMaze" Collapsed="true">
     <Position X="13" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAEAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITVMaze.cs</FileName>
     </TypeIdentifier>
   </Interface>

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FileIO\FileIO.csproj" />
+    <ProjectReference Include="..\MariaDB\MariaDB.csproj" />
     <ProjectReference Include="..\Media_Library\Media_Library.csproj" />
     <ProjectReference Include="..\StringManipulations\StringManipalations\StringManipulations.csproj" />
     <ProjectReference Include="..\UI\UI.csproj" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using UILib;
 using FileIOLib;
-using Media_Library;
+using Database_Lib;
 
 namespace ConsoleApp
 {
@@ -73,6 +73,10 @@ namespace ConsoleApp
                     case "d":
                         OptionD optionD = new OptionD(); 
                         optionD.Main();
+                        break;
+                    case "1":
+                        MariaDB MDb = new MariaDB();
+                        MDb.Connect();
                         break;
                     default:
                         display.DisplayText(display.xleftStatusMsg, display.yStatus, "Menu Command Not Implemented    ");
