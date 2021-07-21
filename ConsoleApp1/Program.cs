@@ -30,7 +30,7 @@ namespace ConsoleApp
                 }
             }
 
-            
+
             while (looper.ToLower() != "q")
             {
                 display.DisplayProgramMenu(false);
@@ -60,7 +60,7 @@ namespace ConsoleApp
                         FileIO config = new FileIO();
                         string[] FilePath = { "Users", "Dick" };
                         string File = "ConsoleAppConfig.txt";
-                        
+
                         (bool success, string FFP) = config.Initialize(FilePath, File);
                         display.DisplayText(20, 20, $"File Create is: {success} at {FFP}\n");
 
@@ -71,7 +71,7 @@ namespace ConsoleApp
                         }
                         break;
                     case "d":
-                        OptionD optionD = new OptionD(); 
+                        OptionD optionD = new OptionD();
                         optionD.Main();
                         break;
                     case "1":
@@ -91,14 +91,18 @@ namespace ConsoleApp
                         }
                         // string sql = "SELECT `key`, info, comments FROM key_values WHERE(`key` = 'email')";
                         string sql = "SELECT * FROM Key_Values WHERE (`key` = 'email')";
+                        // string sql = "SELECT * FROM Key_Values";
                         Console.WriteLine($"SQL = {sql}");
                         MDb.Command(sql);
                         var Info = MDb.ExecQuery();
                         Console.WriteLine($"Info FieldCount: {Info.FieldCount}, Has Rows: {Info.HasRows}");
+
                         while (Info.Read())
                         {
-                            Console.WriteLine($"Reading: Key: {Info[0]}, \n Value: {Info[1]}, \n Comment: {Info[2]}");
-                            
+                            MariaDB.Key_Value_Rec rec = new MariaDB.Key_Value_Rec();
+                            rec.Fill(Info[0].ToString(), Info[1].ToString(), Info[2].ToString());
+                            Console.WriteLine($"Reading via index: Key: {Info[0]}, Info: {Info[1]}, Comment: {Info[2]}");
+                            Console.WriteLine($"Reading via field name: Key: {rec.key}, Info: {rec.info}, Comment: {rec.comment}");
                         }
                         MDb.Close();
                         display.GetInput(50, 0, "");

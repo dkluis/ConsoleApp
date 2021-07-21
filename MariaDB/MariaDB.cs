@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MySqlConnector;
 
 namespace Database_Lib
@@ -60,13 +61,45 @@ namespace Database_Lib
         public MySqlDataReader ExecQuery()
         {
             rdr = cmd.ExecuteReader();
-            Console.WriteLine($"Query result has {rdr.Count()} records");
+            // Console.WriteLine($"Query result has {rdr.Count()} records");  // This sets the rdr to be used completely.
+            // Console.WriteLine($"Query result has {rdr.GetName(0)} records");
+            // Haven't found a good way yet to know how many records are in the set.
             return rdr;
         }
 
         public void ExecNonQuery()
         {
             cmd.ExecuteNonQuery();
+        }
+
+        public struct Key_Value_Rec
+        {
+            public string key;
+            public string info;
+            public string comment;
+
+            public void Fill(string f1, string f2, string f3)
+            {
+                key = f1;
+                info = f2;
+                comment = f3;
+            }
+        } 
+
+        public struct Download_Options_Rec
+        {
+            public string providername;
+            public string link_prefix;
+            public string suffixlink;
+            public string searchchar;
+
+            public void Fill(string f1, string f2, string f3, string f4)
+            {
+                providername = f1;
+                link_prefix = f2;
+                suffixlink = f3;
+                searchchar = f4;
+            }
         }
     }
 
