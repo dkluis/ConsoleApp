@@ -1,5 +1,5 @@
-﻿using System.Text.RegularExpressions;
-using System;
+﻿using System;
+using System.Text.RegularExpressions;
 
 
 namespace StringManipulations
@@ -7,7 +7,7 @@ namespace StringManipulations
     class StrLib
     {
         private static void Main()
-        {   
+        {
         }
     }
 
@@ -15,7 +15,7 @@ namespace StringManipulations
     {
         public string[] MediaPatterns = new string[] { "[sS][0-9]+[eE][0-9]+", "[sS][0-9]+", "season[ .][0-9]+" };
         public string[] MediaFormats = new string[] { ".mkv", ".mp4" };
-        public string[] MediaEliminators = new string[] {"www", "rarbg" };
+        public string[] MediaEliminators = new string[] { "www", "rarbg" };
 
         public string[] ValidateRegex(string regexin, string stringin)
         {

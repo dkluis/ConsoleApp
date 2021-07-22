@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
-using MySqlConnector;
 
 namespace Database_Lib
 {
@@ -35,7 +35,7 @@ namespace Database_Lib
             try
             {
                 conn.Open();
-            Console.WriteLine($"MariaDB is Open with status {conn.State.ToString()}");
+                Console.WriteLine($"MariaDB is Open with status {conn.State.ToString()}");
             }
             catch (Exception e)
             {
@@ -85,7 +85,7 @@ namespace Database_Lib
                 info = f2;
                 comment = f3;
             }
-        } 
+        }
 
         public struct Download_Options_Rec
         {

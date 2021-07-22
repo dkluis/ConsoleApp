@@ -40,7 +40,7 @@ namespace FileIOLib
         {
             bool success = false;
             FullFileName = Path.Combine(FilePathIn);
-            FullFileName = Path.Join(Drive, FullFileName); 
+            FullFileName = Path.Join(Drive, FullFileName);
             FullFileName = Path.Join(FullFileName, File);
             if (Exists())
             {
