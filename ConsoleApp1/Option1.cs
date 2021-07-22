@@ -73,7 +73,10 @@ namespace ConsoleApp
             Console.WriteLine($"Read showid: {show1[0]} with showname: {show1[1]} premiered on {show1[5]}");
             MariaDB.Shows_Rec show_rec = new();
             show_rec.Fill((UInt64)show1[0], (string)show1[1], (string)show1[2], (string)show1[3], (string)show1[4], (string)show1[5]);
-            Console.WriteLine($"Read showid: {show_rec.showid} with showname: {show_rec.showname} premiered on {show_rec.premiered} and status now is {show_rec.showstatus}");
+            Console.WriteLine($"Read showid: {show_rec.showid} " +
+                $"with showname: {show_rec.showname} " +
+                $"premiered on {show_rec.premiered} " +
+                $"and status now is {show_rec.showstatus}");
 
             Display disp = new Display();
             disp.GetInput(50, 0, "");
