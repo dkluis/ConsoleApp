@@ -6,10 +6,11 @@ namespace Database_Lib
 {
     public class MariaDB
     {
-        private string ConnectionInfo = @"server=ca-server.local; database=Test-TVM-DB; uid=dick; pwd=Sandy3942";
+        private string ConnectionInfo = @"server=ca-server.local; database=Test-TVM-DB; uid=dick; pwd=Sandy3942"; //Test DB Info, not sensitive info
         private MySqlConnection conn;
         private MySqlCommand cmd;
         private MySqlDataReader rdr;
+        private MySqlDataAdapter da;
         public string exception;
 
         public bool Connect()

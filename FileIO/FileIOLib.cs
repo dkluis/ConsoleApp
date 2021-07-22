@@ -18,6 +18,7 @@ namespace FileIOLib
         protected string FullFileName;
 
         protected string WorkingPath;
+        protected string WorkingDrive;
         protected string UserName;
 
         protected bool Initialized;
@@ -30,6 +31,7 @@ namespace FileIOLib
 
             EnvInfo ei = new EnvInfo();
             WorkingPath = ei.WorkingPath;
+            WorkingDrive = ei.WorkingDrive;
             UserName = ei.UserName;
             Drive = ei.Drive;
         }
@@ -82,6 +84,7 @@ namespace FileIOLib
         public readonly string MachineName;
         public readonly string UserName;
         public readonly string WorkingPath;
+        public readonly string WorkingDrive;
         public readonly string Drive;
 
         public EnvInfo()
@@ -109,6 +112,7 @@ namespace FileIOLib
             }
             MachineName = Environment.MachineName.ToString();
             WorkingPath = Environment.CurrentDirectory;
+            WorkingDrive = Path.GetPathRoot(WorkingPath);
             UserName = Environment.UserName;
         }
     }
