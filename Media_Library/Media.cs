@@ -32,7 +32,7 @@ namespace Media_Library
 
         public virtual MediaInfo GetMediaInfo()
         {
-            MediaInfo returnvalue = new MediaInfo();
+            MediaInfo returnvalue = new();
             return returnvalue; 
         }
 

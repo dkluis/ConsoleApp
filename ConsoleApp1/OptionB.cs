@@ -52,7 +52,7 @@ namespace ConsoleApp
 
                 mi = SM.EliminatePrefixes(mi);
                 disp.DisplayText(disp.xleftStatusMsg, disp.yStatus + 1, $"TVShow Name is: {mi.TVShowName}");
-                mi = SM.CleanupName(mi);
+                mi = StrMani.CleanupName(mi);
                 disp.DisplayText(disp.xleftStatusMsg, disp.yStatus + 1, $"Cleaned TVShow Name is: \"{mi.TVShowName}\"");
 
                 Looper = disp.GetInput(0, 1, "Hit q: ");

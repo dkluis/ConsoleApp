@@ -10,7 +10,7 @@ namespace Database_Lib
         private MySqlConnection conn;
         private MySqlCommand cmd;
         private MySqlDataReader rdr;
-        private MySqlDataAdapter da;
+        //private MySqlDataAdapter da;
         public string exception;
 
         public bool Connect()
@@ -19,7 +19,7 @@ namespace Database_Lib
             try
             {
                 conn = new MySqlConnection(ConnectionInfo);
-                Console.WriteLine($"MariaDB is connected with status {conn.State.ToString()}");
+                Console.WriteLine($"MariaDB is connected with status {conn.State}");
             }
             catch (Exception e)
             {
@@ -35,7 +35,7 @@ namespace Database_Lib
             try
             {
                 conn.Open();
-                Console.WriteLine($"MariaDB is Open with status {conn.State.ToString()}");
+                Console.WriteLine($"MariaDB is Open with status {conn.State}");
             }
             catch (Exception e)
             {
@@ -48,14 +48,14 @@ namespace Database_Lib
         public void Close()
         {
             conn.Close();
-            Console.WriteLine($"MariaDB is Close with status {conn.State.ToString()}");
+            Console.WriteLine($"MariaDB is Close with status {conn.State}");
         }
 
         public MySqlCommand Command(string sql)
         {
             cmd = new MySqlCommand(sql, conn);
-            Console.WriteLine($"MariaDB Command status {conn.State.ToString()}");
-            Console.WriteLine($"MariaDB is Cmd status {cmd.ToString()}");
+            Console.WriteLine($"MariaDB Command status {conn.State}");
+            Console.WriteLine($"MariaDB is Cmd status {cmd}");
             return cmd;
         }
 
@@ -117,8 +117,8 @@ namespace Database_Lib
 
         public static List<MariaDB.Key_Value_Rec> List_KeyValue_Records(this MySqlDataReader dr)
         {
-            List<MariaDB.Key_Value_Rec> ListofRecords = new List<MariaDB.Key_Value_Rec>();
-            MariaDB.Key_Value_Rec rec = new MariaDB.Key_Value_Rec();
+            List<MariaDB.Key_Value_Rec> ListofRecords = new();
+            MariaDB.Key_Value_Rec rec = new();
 
             while (dr.Read())
             {

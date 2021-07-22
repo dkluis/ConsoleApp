@@ -31,8 +31,7 @@ namespace StringManipulations
                 Console.Clear();
                 Console.WriteLine($"Invalid Regex Exception");
                 Console.WriteLine($"{e}");
-                string[] empty = new string[] { };
-                return empty;
+                return Array.Empty<string>();
             }
         }
 
@@ -47,7 +46,7 @@ namespace StringManipulations
             return mi;
         }
 
-        public MediaInfo CleanupName(MediaInfo mi)
+        public static MediaInfo CleanupName(MediaInfo mi)
         {
             string name = mi.TVShowName;
             name = name.Replace(".", " ").Replace("   ", " ").Replace("  ", " ");

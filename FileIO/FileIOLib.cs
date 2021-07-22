@@ -29,7 +29,7 @@ namespace FileIOLib
             Initialized = false;
             FileExists = false;
 
-            EnvInfo ei = new EnvInfo();
+            EnvInfo ei = new();
             WorkingPath = ei.WorkingPath;
             WorkingDrive = ei.WorkingDrive;
             UserName = ei.UserName;
@@ -53,7 +53,7 @@ namespace FileIOLib
 
         private bool Exists()
         {
-            bool exist = false;
+            bool exist;
             if (!File.Exists(FullFileName))
             {
                 File.Create(FullFileName);
@@ -68,7 +68,7 @@ namespace FileIOLib
 
         public void WriteLines(string[] line, bool appending)
         {
-            // File.WriteAllLines("Config.txt", line, append: appending);
+            //
         }
 
         public string[] ReadLines()
@@ -98,7 +98,7 @@ namespace FileIOLib
                 case PlatformID.Win32Windows:
                 case PlatformID.WinCE:
                     OS = "Windows";
-                    Drive = @"C:";
+                    Drive = @"C:\";
                     break;
                 case PlatformID.Unix:
                 case PlatformID.MacOSX:
