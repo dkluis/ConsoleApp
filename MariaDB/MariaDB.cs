@@ -62,9 +62,6 @@ namespace Database_Lib
         public MySqlDataReader ExecQuery()
         {
             rdr = cmd.ExecuteReader();
-            // Console.WriteLine($"Query result has {rdr.Count()} records");  // This sets the rdr to be used completely.
-            // Console.WriteLine($"Query result has {rdr.GetName(0)} records");
-            // Haven't found a good way yet to know how many records are in the set.
             return rdr;
         }
 
@@ -101,6 +98,57 @@ namespace Database_Lib
                 suffixlink = f3;
                 searchchar = f4;
             }
+        }
+
+        public struct Shows_Rec
+        {
+            public UInt64 showid;
+            public string showname;
+            public string url;
+            public string type;
+            public string showstatus;
+            public string premiered;
+            public string language;
+            public int runtime;
+            public string network;
+            public string country;
+            public string tvrage;
+            public string thetvdb;
+            public string imdb;
+            public Int64 tvmaze_updated;
+            public MySqlDateTime tvmaze_upd_date;
+            public string status;
+            public string download;
+            public MySqlDateTime record_updated;
+            public string alt_showname;
+            public string alt_sn_override;
+            public int eps_count;
+            public MySqlDateTime eps_updated;
+
+            public void Fill(UInt64 f1, string f2, string f3, string f4, string f5, string f6)
+            {
+                showid = f1;
+                showname = f2;
+                url = f3;
+                type = f4;
+                showstatus = f5;
+                premiered = f6;
+            }
+
+            public void Fill(UInt64 f1, string f2, string f3, string f4, string f5, string f6,
+                string f7, int f8, string f9, string f10, string f11, string f12, string f13,
+                Int64 f14, MySqlDateTime f15, string f16, string f17,
+                MySqlDateTime f18, string f19, string f20, int f21, MySqlDateTime f22)
+
+            {
+                showid = f1;
+                showname = f2;
+                url = f3;
+                type = f4;
+                showstatus = f5;
+                premiered = f6;
+            }
+
         }
     }
 

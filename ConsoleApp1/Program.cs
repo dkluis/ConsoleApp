@@ -64,6 +64,8 @@ namespace ConsoleApp
                         (bool success, string FFP) = config.Initialize(FilePath, File);
                         display.DisplayText(20, 20, $"File Create is: {success} at {FFP} and Drive is {ei.WorkingDrive}\n");
 
+                        config.WriteLines(FilePath, true);
+
                         string[] result = config.ReadLines();
                         foreach (string line in result)
                         {

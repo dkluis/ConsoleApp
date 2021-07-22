@@ -66,9 +66,19 @@ namespace FileIOLib
             return exist;
         }
 
-        public void WriteLines(string[] line, bool appending)
+        /// <summary>
+        /// Add a list of lines to a file if append is true
+        /// Rewrites the file with a list of lines if append if false
+        /// </summary>
+        /// <param name="lines">List of lines</param>
+        /// <param name="append">bool</param>
+        public void WriteLines(string[] lines, bool append)
         {
-            //
+            using StreamWriter file = new(FullFileName, append);  // using make this disposable.
+            foreach (string line in lines)
+            {
+                file.WriteLine(line);
+            }
         }
 
         public string[] ReadLines()
